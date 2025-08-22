@@ -7,30 +7,22 @@
          url('../fonts/weblysleekuil.ttf') format('truetype');
 }
 
-html {
-	overflow: hidden;
+.browsehappy {
+    margin: 0;
+    padding: 1vh;
+    background: #fff;
+    color: #000;
 }
 
 html, body {
-	height: 100%;
+	overflow: hidden;
+	height: 100vh;
 	margin: 0;
 	padding: 0;
 }
 
 body {
-    font-family: "weblysleek_uilight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #fff;
-    margin: auto;
     background-image: url('../images/high-768.jpg');
-    width: 100%;
-    max-width: calc(2.18780251694095 * 100vh);
-}
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
 }
 
 @media all and (min-width: 1024px) and (max-width: 1920px) {
@@ -50,25 +42,30 @@ body {
 }
 
 body {
-    background-repeat: no-repeat;
+	margin: auto;
+    width: 100vw;
+    font-family: "weblysleek_uilight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+	background-repeat: no-repeat;
     background-color: #fff;
-    background-size: auto 100%;
+    background-size: auto 100vh;
     background-position: center;
 }
 
 nav {
 	position: absolute;
-	top: 24%;
-	max-width: 50%;
+	top: 24vh;
+	max-width: 75vw;
 	h1 { 
 		margin: 0;
 		font-size: 6vh;
+		font-weight: normal;
+		color: #2e4117;
 		line-height: 9vh;
 		cursor: default;
 		span {
 			display: inline-block;
 			background-color: #fff;
-			color: #374e1c;
 			padding-left: 1.5vh;
 			padding-right: 1.5vh;
 			&:first-child {
@@ -83,14 +80,13 @@ nav {
 		margin-bottom: 5vh;
 	}
 	a {
+		padding: 0 1.5vh 0 1.5vh;
 		font-size: 4.5vh;
 		color: #fff;
 		text-decoration: none;
 		-webkit-font-smoothing: antialiased;
-		position: relative;
 		transition: background-color .25s ease;
 		-webkit-transition: background-color .25s ease;
-		padding: 0 1.5vh 0 1.5vh;
 		&:hover, &:focus {
 			outline: 0;
 			background-color: rgba(255, 255, 255, 0.1);
@@ -100,50 +96,5 @@ nav {
 			-webkit-transition: background-color .5s ease;
 			background-color: rgba(255, 255, 255, 0);	
 		}
-		// &:after {
-		// 	content: '';
-		// 	position: absolute;
-		// 	left: -4%;
-		// 	margin-top: 7%;
-		// 	height: 70%;
-		// 	transition: all .20s ease;
-  		// -webkit-transition: all .20s ease;
-		// 	border-left: 1vh solid transparent;
-		// }
-		// &:hover:after, &:focus:after {
-		// 	left: -8%;
-		// 	border-color: white;
-		// }
-		// &:active:after {
-		// 	transition: all .1s ease;
-  		// -webkit-transition: all .1s ease;
-		// 	border-color: transparent;
-		// }
 	}
 }
-
-.fade {
-	/* CSS needed for animation
-	---------------------------------------------------- */
-	opacity:0;
-	-webkit-animation:fadeIn ease 1;
-	-moz-animation:fadeIn ease 1;
-	-o-animation:fadeIn ease 1;
-	animation:fadeIn ease 1;
-	-webkit-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	animation-fill-mode:forwards;
-	-webkit-animation-duration:1s;
-	-moz-animation-duration:1s;
-	-o-animation-duration:1s;
-	animation-duration:1s;
-
-}
-
-/* Key Frames
----------------------------------------------------- */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
